@@ -1,4 +1,4 @@
-package cleancode;
+package cleancode.human;
 
 import cleancode.weapon.Weapon;
 import cleancode.weapon.WeaponType;

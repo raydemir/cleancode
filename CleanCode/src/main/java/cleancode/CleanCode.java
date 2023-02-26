@@ -1,5 +1,7 @@
 package cleancode;
 
+import cleancode.human.CraftsmanHuman;
+import cleancode.human.WarriorHuman;
 import cleancode.weapon.Weapon;
 import cleancode.weapon.WeaponType;
 
