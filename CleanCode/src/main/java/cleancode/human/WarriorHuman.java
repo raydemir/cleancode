@@ -9,27 +9,28 @@ public class WarriorHuman extends Human {
         super(humanName, weapon);
     }
 
-    private void printWeapon(Weapon weapon){
-        System.out.println(weapon.getWeaponName());
+    private void printWeaponName() {
+        System.out.println(getWeapon().getName());
     }
 
     @Override
     public void useWeapon() {
-
         WeaponType type = getWeapon().getType();
-        if (type == WeaponType.knife) {
-            System.out.println(getWeapon().getWeaponName() + " is used by " + humanName);
-        } else if (type == WeaponType.riffle) {
-            System.out.println(getWeapon().getWeaponName() + " is used by " + humanName);
-        } else if (type == WeaponType.sword) {
-            System.out.println(getWeapon().getWeaponName() + "is used by " + humanName);
-        } else {
-            System.out.println("Unknown weapon!");
+        switch (type) {
+            case KNIFE:
+            case RIFFLE:
+            case SWORD:
+                System.out.println(getWeapon().getName() + " is used by " + getHumanName());
+                break;
+            default:
+                System.out.println("Unknown weapon!");
+                break;
         }
     }
 
     @Override
     public void craftWeapon(WeaponType type) {
-
+        System.out.println("Crafting weapon is not supported by " + this.getClass().getSimpleName());
     }
+
 }

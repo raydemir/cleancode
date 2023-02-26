@@ -6,7 +6,7 @@ import cleancode.weapon.WeaponType;
 
 public class CraftsmanHuman extends Human {
 
-    private int type;
+    private String weaponName;
 
     public CraftsmanHuman(String humanName) {
         super(humanName, null);
@@ -14,23 +14,31 @@ public class CraftsmanHuman extends Human {
 
     @Override
     public void useWeapon() {
-
+        if (getWeapon() != null) {
+            System.out.println(getHumanName() + " is using " + getWeapon().getName());
+        } else {
+            System.out.println(getHumanName() + " has no weapon to use!");
+        }
     }
 
     @Override
     public void craftWeapon(WeaponType type) {
-
-        String weaponName = "undefined";
-
-        if (type == WeaponType.knife) {
-            weaponName = "knife";
-        } else if (type == WeaponType.riffle) {
-            weaponName = "riffle";
-        } else if (type == WeaponType.sword) {
-            weaponName = "sword";
+        switch (type) {
+            case KNIFE:
+                weaponName = "Knife";
+                break;
+            case RIFFLE:
+                weaponName = "Riffle";
+                break;
+            case SWORD:
+                weaponName = "Sword";
+                break;
+            default:
+                weaponName = "Undefined";
+                break;
         }
 
-        weapon = new Weapon(weaponName, type);
+        setWeapon(new Weapon(weaponName, type));
         System.out.println(weaponName + " is created by " + getHumanName());
     }
 }

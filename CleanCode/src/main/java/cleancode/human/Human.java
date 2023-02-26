@@ -5,8 +5,8 @@ import cleancode.weapon.WeaponType;
 
 public abstract class Human {
 
-    public String humanName;
-    public Weapon weapon;
+    private String humanName;
+    private Weapon weapon;
 
     public Human(String humanName, Weapon weapon) {
         this.humanName = humanName;
@@ -17,11 +17,20 @@ public abstract class Human {
         return humanName;
     }
 
+    public void setHumanName(String humanName) {
+        this.humanName = humanName;
+    }
+
     public Weapon getWeapon() {
         return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
     public abstract void useWeapon();
 
     public abstract void craftWeapon(WeaponType type);
+
 }

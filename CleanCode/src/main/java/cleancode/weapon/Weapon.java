@@ -2,11 +2,11 @@ package cleancode.weapon;
 
 public class Weapon {
 
-    String weaponName;
-    WeaponType type;
+    private String name;
+    private WeaponType type;
 
-    public Weapon(String weaponName, WeaponType type) {
-        this.weaponName = weaponName;
+    public Weapon(String name, WeaponType type) {
+        this.name = name;
         this.type = type;
     }
 
@@ -14,7 +14,12 @@ public class Weapon {
         return type;
     }
 
-    public String getWeaponName() {
-        return weaponName;
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

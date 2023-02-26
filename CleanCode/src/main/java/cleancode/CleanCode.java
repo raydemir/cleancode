@@ -11,7 +11,7 @@ public class CleanCode {
 
         CraftsmanHuman craftsmanHuman = new CraftsmanHuman("Craftsman");
 
-        craftsmanHuman.craftWeapon(WeaponType.riffle);
+        craftsmanHuman.craftWeapon(WeaponType.RIFFLE);
 
         Weapon weapon = craftsmanHuman.getWeapon();
 
@@ -19,5 +19,4 @@ public class CleanCode {
 
         warriorHuman.useWeapon();
     }
-
 }
