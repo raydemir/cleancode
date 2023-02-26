@@ -1,21 +1,24 @@
 package cleancode;
 
-import cleancode.weapon.Weapon;
-import cleancode.weapon.WeaponType;
+import cleancode.human.Human;
+import cleancode.human.HumanFactory;
+import cleancode.human.craftsman.CraftsmanFactory;
+import cleancode.human.warrior.WarriorFactory;
+import cleancode.weapon.Knife;
+import cleancode.weapon.Sword;
 
 public class CleanCode {
 
     public static void main(String[] args) {
 
-        CraftsmanHuman craftsmanHuman = new CraftsmanHuman("Craftsman");
+        HumanFactory craftsmanFactory = new CraftsmanFactory();
+        Human craftsman = craftsmanFactory.createHuman(new Knife());
+        craftsman.attack();
+        craftsman.eat();
 
-        craftsmanHuman.craftWeapon(WeaponType.riffle);
-
-        Weapon weapon = craftsmanHuman.getWeapon();
-
-        WarriorHuman warriorHuman = new WarriorHuman("Warrior", weapon);
-
-        warriorHuman.useWeapon();
+        HumanFactory warriorFactory = new WarriorFactory();
+        Human warrior = warriorFactory.createHuman(new Sword());
+        warrior.attack();
+        warrior.sleep();
     }
-
 }

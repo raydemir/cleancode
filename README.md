@@ -1,7 +1,9 @@
 # CleanCode
 
-CleanCode yazılım ürününde OOP prensipleri çiğnenmiştir ve uygulamanın birçok yerinde kötü kokular (bad smells bkz: Clean Code, Robert C. Martin) bulunmaktadır. Bunları tespit edip düzeltmenizi bekliyoruz.
-
-Ek olarak mimari yapıda da sorunlar bulunmaktadır. Mesela sistemde yeni bir Weapon tipi tanımlanırsa yaşanacak sorunlar nelerdir? Ayrıca sisteme yeni bir Human tipi gelirse nerelerde değişiklik yapmak gerekecek bu durum Open-Closed prensibinde ne gibi sorunlara yol açar? 
-
-Uygulamada genel olarak SOLID prensibini bozduğunu düşündüğünüz sınıfları istediğiniz gibi değiştirebilirsiniz. Yaptığınız değişikliklerin sebeplerini yorum satırı olarak yazmanızı bekliyoruz. En fazla iki sınıf için geleneğe uygun Javadoc yazmanızı istiyoruz. Uygulamayı herhangi bir Java IDE'sinde "CleanCode" sınıfını Run ederek çalıştırabilirsiniz.
+The project is a Java application considered that simulates a battle game between two types of humans: craftsman and
+warrior. The project originally violated several OOP principles and SOLID principles. To improve the design, the
+Abstract Factory design pattern applied to create factories for creating human craftsman and warrior objects, and
+original classes refactored to implement these factories. interfaces introduced to increase abstraction and dependency
+inversion Finally, code refactored to improve naming, readability, and maintainability, and example Javadoc comment
+added to improve documentation for Weapon interface. Overall, the refactored code is more modular, flexible, and easier
+to extend.
