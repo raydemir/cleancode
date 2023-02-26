@@ -1,25 +1,23 @@
 package cleancode.weapon;
 
-public class Weapon {
+/**
+ * The Weapon interface represents a basic structure of a weapon that can be
+ * used by a warrior.
+ */
+public interface Weapon {
 
-    private String name;
-    private WeaponType type;
+    /**
+     * The createWeapon method creates a new instance of a Weapon object.
+     *
+     * @return a new instance of a Weapon object
+     */
+    Weapon createWeapon();
 
-    public Weapon(String name, WeaponType type) {
-        this.name = name;
-        this.type = type;
-    }
-
-    public WeaponType getType() {
-        return type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * Returns the name of the weapon.
+     *
+     * @return the name of the weapon as a string
+     */
+    String getName();
 
 }
